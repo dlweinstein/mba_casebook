@@ -87,6 +87,14 @@ Rails.application.routes.draw do
   devise_for :students
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  # READ for users
+    get "/students", :controller => "students", :action => "index"
+    get "/students/:id", :controller => "students", :action => "show"
+
+    # READ for my_likes
+    get "/my_favorites", :controller => "students", :action => "myfavorites"
+
+
 root 'cases#index'
 
 end

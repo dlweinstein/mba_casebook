@@ -17,17 +17,17 @@
         <th>Actions</th>
       </tr>
 
-      <% @cases.each do |case| %>
+      <% @cases.each do |the_case| %>
       <tr>
-        <td><%= case.case_type %></td>
-        <td><%= case.leader %></td>
-        <td><%= case.industry %></td>
-        <td><%= case.page %></td>
-        <td><%= case.user_id %></td>
+        <td><%= the_case.case_type %></td>
+        <td><%= the_case.leader %></td>
+        <td><%= the_case.industry %></td>
+        <td><%= the_case.page %></td>
+        <td><%= the_case.user_id %></td>
         <td>
-          <a href="/cases/<%= case.id %>" class="btn btn-primary">Show</a>
-          <a href="/cases/<%= case.id %>/edit" class="btn btn-warning">Edit</a>
-          <a href="/delete_case/<%= case.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+          <a href="/cases/<%= the_case.id %>" class="btn btn-primary">Show</a>
+          <a href="/cases/<%= the_case.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_case/<%= the_case.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
         </td>
       </tr>
       <% end %>

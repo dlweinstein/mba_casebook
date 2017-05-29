@@ -1,0 +1,20 @@
+<div class="page-header">
+  <h3> My Favorite Cases </h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+
+      <dt>Photos</dt>
+      <dd>
+        <ul class="list-group">
+        <% current_student.liked_cases.each do |the_case| %>
+          <li class="list-group-item">
+            <img src="<%= photo.image %>" width="300" height="200">
+              <%= the_case.case_type %>
+          </li>
+        <% end %>
+
+  </div>
+</div>

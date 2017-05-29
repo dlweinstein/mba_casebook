@@ -20,11 +20,19 @@ class CasesController < ApplicationController
   def create
     @case = Case.new
 
+    @case.name = params[:name]
     @case.case_type = params[:case_type]
-    @case.leader = params[:leader]
+    @case.interviewer_led = params[:interviewer_led]
     @case.industry = params[:industry]
+    @case.quant = params[:quant]
+    @case.structure = params[:structure]
     @case.page = params[:page]
-    @case.user_id = params[:user_id]
+    @case.student_id = current_student.id
+    @case.school_id = current_student.school_id
+
+
+#    @case.student_id = params[:student_id]
+#    @case.school_id = params[:school_id]
 
     save_status = @case.save
 
