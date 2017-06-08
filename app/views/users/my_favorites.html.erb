@@ -1,21 +1,20 @@
 <div class="page-header">
-  <h3><%= @student.first_name %> <%= @student.last_name %></h3>
+  <h3> My Favorite Cases </h3>
 </div>
 
 <div class="row">
   <div class="col-md-12">
     <dl class="dl-horizontal">
-      <dt>Name</dt>
-      <dd><%= @student.first_name %> <%= @student.last_name %></dd>
-
-      <dt>Email</dt>
-      <dd><%= @student.email %></dd>
 
       <dt>Cases</dt>
       <dd>
         <ul class="list-group">
-        <% @student.cases.each do |the_case| %>
+        <% current_user.liked_cases.each do |the_case| %>
           <li class="list-group-item">
+            <img src="<%= photo.image %>" width="300" height="200">
               <%= the_case.case_type %>
           </li>
         <% end %>
+
+  </div>
+</div>

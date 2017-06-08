@@ -1,19 +1,19 @@
-class StudentsController < ApplicationController
+class UsersController < ApplicationController
   def index
-    @students = Student.all
+    @users = User.all
 
-    render("students/index.html.erb")
+    render("users/index.html.erb")
   end
 
   def show
-    @student = Student.find(params[:id])
+    @user = User.find(params[:id])
     @case = Case.new
 
-    render("students/show.html.erb")
+    render("users/show.html.erb")
   end
 
   def myfavorites
-    render("/students/my_favorites.html.erb")
+    render("/users/my_favorites.html.erb")
     end
 
 end

@@ -5,17 +5,29 @@
 <div class="row">
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
+      <dt>Case name</dt>
+      <dd><%= @case.name %></dd>
+
       <dt>Case type</dt>
       <dd><%= @case.case_type %></dd>
 
-      <dt>Leader</dt>
-      <dd><%= @case.leader %></dd>
+      <dt>Interviewer led?</dt>
+      <dd><%= @case.interviewer_led %></dd>
 
       <dt>Industry</dt>
       <dd><%= @case.industry %></dd>
 
+            <dt>Structure score</dt>
+            <dd><%= @case.structure %></dd>
+
+      <dt>Quant score</dt>
+      <dd><%= @case.quant %></dd>
+
       <dt>Page</dt>
       <dd><%= @case.page %></dd>
+
+      <dt>User</dt>
+      <dd><%= @case.school_id %></dd>
 
       <dt>User</dt>
       <dd><%= @case.user_id %></dd>

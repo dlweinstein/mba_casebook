@@ -1,12 +1,12 @@
-class Student < ApplicationRecord
+class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
 
   # Direct associations
-  has_many :cases, :class_name => "Case", :foreign_key => "student_id", :dependent => :destroy
-  has_many :favorites, :foreign_key => "student_id", :dependent => :destroy
+  has_many :cases, :class_name => "Case", :foreign_key => "user_id", :dependent => :destroy
+  has_many :favorites, :foreign_key => "user_id", :dependent => :destroy
   has_many :sent_friend_requests, :class_name => "Friend", :foreign_key => "sender_id", :dependent => :destroy
   has_many :received_friend_requests, :class_name => "Friend", :foreign_key => "recipient_id", :dependent => :destroy
   has_many :sent_messages, :class_name => "Message", :foreign_key => "sender_id", :dependent => :destroy

@@ -27,12 +27,13 @@ class CasesController < ApplicationController
     @case.quant = params[:quant]
     @case.structure = params[:structure]
     @case.page = params[:page]
-    @case.student_id = current_student.id
-    @case.school_id = current_student.school_id
+
+    @case.student_id = current_u ser.id
+    @case.school_id = current_u ser.school_id
 
 
-#    @case.student_id = params[:student_id]
-#    @case.school_id = params[:school_id]
+    #    @case.user_id = params[:user_id]
+    #    @case.school_id = params[:school_id]
 
     save_status = @case.save
 
@@ -52,11 +53,20 @@ class CasesController < ApplicationController
   def update
     @case = Case.find(params[:id])
 
+    @case.name = params[:name]
     @case.case_type = params[:case_type]
-    @case.leader = params[:leader]
+    @case.interviewer_led = params[:interviewer_led]
     @case.industry = params[:industry]
+    @case.quant = params[:quant]
+    @case.structure = params[:structure]
     @case.page = params[:page]
-    @case.user_id = params[:user_id]
+
+    @case.user_id = current_user.id
+    @case.school_id = current_user.school_id
+
+
+    #    @case.user_id = params[:user_id]
+    #    @case.school_id = params[:school_id]
 
     save_status = @case.save
 

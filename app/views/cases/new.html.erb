@@ -27,7 +27,6 @@
         <input type="text" id="name" name="name" placeholder="Case name" class="form-control" value="<%= @case.name %>">
       </div>
 
-
       <!-- Label and input for case_type -->
       <div class="form-group">
         <label for="case_type" class="control-label">
@@ -82,11 +81,11 @@
       </div>
 
 
-<!-- Hidden input for student_id -->
-<input type="hidden" name="student_id" value="<%= current_student.id %>"></div>
+<!-- Hidden input for user_id -->
+<input type="hidden" name="user_id" value="<%= current_user.id %>"></div>
 
 <!-- Hidden input for school_id -->
-<input type="hidden" name="school_id" value="<%= current_student.school_id %>"></div>
+<input type="hidden" name="school_id" value="<%= current_user.school_id %>"></div>
 
 
       <button class="btn btn-success">

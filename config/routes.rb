@@ -84,15 +84,15 @@ Rails.application.routes.draw do
   get "/delete_case/:id", :controller => "cases", :action => "destroy"
   #------------------------------
 
-  devise_for :students
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # READ for users
-    get "/students", :controller => "students", :action => "index"
-    get "/students/:id", :controller => "students", :action => "show"
+    get "/users", :controller => "users", :action => "index"
+    get "/users/:id", :controller => "users", :action => "show"
 
     # READ for my_likes
-    get "/my_favorites", :controller => "students", :action => "myfavorites"
+    get "/my_favorites", :controller => "users", :action => "myfavorites"
 
 
 root 'cases#index'
